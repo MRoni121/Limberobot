@@ -5,6 +5,11 @@ import playQ from "./utils/songs/playQ";
 import skipQ from "./utils/songs/skipQ";
 import stopQ from "./utils/songs/stopQ";
 import welcome from "./utils/welcome";
+import express from 'express';
+
+const app = express();
+app.get('/', (req, res) => res.send('Hello World'));
+app.listen(3000, () => console.log('App running on port 3000'));
 
 const client = new discord.Client();
 const queue = new Map();
