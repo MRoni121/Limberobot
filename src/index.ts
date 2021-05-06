@@ -15,12 +15,12 @@ const client = new discord.Client();
 const queue = new Map();
 dotEnv.config();
 
-client.on('ready', async () => {
-  const aChannel = client.channels.cache.get('837351685906628681');
-  const channel = <TextChannel> aChannel;
+// client.on('ready', async () => {
+//   const aChannel = client.channels.cache.get('837351685906628681');
+//   const channel = <TextChannel> aChannel;
 
-  await channel?.send('Online e sem calcinha');
-})
+//   await channel?.send('Online e sem calcinha');
+// })
 
 
 client.on('message', async (message) => {
