@@ -31,7 +31,7 @@ client.on('message', async (message) => {
   if(msg.startsWith(prefix)) {
     const serverQueue = queue.get(message.guild?.id);
 
-    if(msg.startsWith(`${prefix}play`)) {
+    if(msg.startsWith(`${prefix}play`) || msg.split(' ')[0] === `${prefix}p`) {
       playQ(message, serverQueue, queue);
       return;
     }
